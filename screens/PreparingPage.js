@@ -2,14 +2,14 @@ import { View, Text, SafeAreaView } from 'react-native'
 import React, { useEffect } from 'react'
 import * as Animatable from 'react-native-animatable'
 import { useNavigation } from '@react-navigation/native'
-
+// this
 const PreparingPage = () => {
     const navigation= useNavigation()
     useEffect(() => { 
         // After couple seconds switch to the next screen 
         setTimeout(() => { 
             navigation.navigate("DeliveryState")
-        }, 4000)
+        }, 6000)
       })
     
   return (

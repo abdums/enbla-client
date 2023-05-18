@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 import { CheckIcon } from 'react-native-heroicons/outline'
-
+// this
 const CheckList = ({time, title, description, ready}) => {
   return (
     <View className="mt-5">

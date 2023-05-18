@@ -1,6 +1,6 @@
 import {  Text, TouchableOpacity } from 'react-native'
 import React from 'react'
-
+// this
 const FilterCard = ({name}) => {
    
 //   const [selected, setSelected] = useState(false)

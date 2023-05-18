@@ -1,7 +1,7 @@
 import { View, Text, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
 import {PlusIcon} from 'react-native-heroicons/solid'
-
+// this
 
 const HitsOfTheWeek = ({img}) => {
   return (
@@ -15,7 +15,7 @@ const HitsOfTheWeek = ({img}) => {
         }}
       className=" w-[289px] h-[187px] rounded-2xl"/>
       <Text className="text-white absolute bottom-6 left-4 text-sm font-medium  ">
-        Two slices of pizza with <br />delicious salami
+        Two slices of pizza with  delicious salami
       </Text>
       <TouchableOpacity className="absolute top-5 right-4 bg-black rounded-full h-[30px] w-[30px] items-center flex justify-center">
         <PlusIcon size={20} color={"white"}/>

@@ -1,7 +1,7 @@
 import { View, Text, ScrollView } from 'react-native'
 import React from 'react'
 import HitsOfTheWeek from './HitsOfTheWeek'
-
+// this
 
 const HitsOfTheWeekRow = ({id}) => {
   return (

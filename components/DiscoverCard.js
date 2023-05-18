@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-
+// this
 const DiscoverCard = ({title}) => {
   return (
     <View className="border-b border-gray-300/80 ">

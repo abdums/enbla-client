@@ -56,14 +56,14 @@ const BottomTab = () => {
         
     }}>
       <Tab.Screen name="Home" component={HomeScreen} options={{
-        // tabBarIcon: ({focused}) => (
-        //     focused ? (
-        //       <HomeFocus size={35} strokeWidth={1.5} color={"#000"} />
+        tabBarIcon: ({focused}) => (
+            focused ? (
+              <HomeFocus size={35} strokeWidth={1.5} color={"#000"} />
 
-        //     ) : (
-        //       <HomeIcon size={35} strokeWidth={1.5} color={"#000"} />
-        //     ) 
-        //   )
+            ) : (
+              <HomeIcon size={35} strokeWidth={1.5} color={"#000"} />
+            ) 
+          )
       }} /> 
       <Tab.Screen name="Search" component={SearchScreen} options={{
         // tabBarIcon: ({focused}) => (

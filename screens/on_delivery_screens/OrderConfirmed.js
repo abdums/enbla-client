@@ -5,7 +5,7 @@ import * as Animatable from 'react-native-animatable'
 import {CheckIcon} from 'react-native-heroicons/solid'
 import CheckList from '../../components/timeline_events/CheckList'
 
-
+// this
 const OrderConfirmed = () => {
   const navigation = useNavigation()
   useEffect(() => { 

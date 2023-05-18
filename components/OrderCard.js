@@ -1,11 +1,11 @@
-import { View, Text } from 'react-native'
+import { View, Text, Image } from 'react-native'
 import React from 'react'
-
-const OrderCard = ({title, date }) => {
+// this
+const OrderCard = ({title, date,image }) => {
   return (
     <View>
       <View className="flex flex-row items-center mb-3 mt-2">
-        <View className="w-[63px] h-[64px] bg-[#d9d9d9] rounded-md mr-4"/>
+        <Image source={{uri:image}} className="w-[63px] h-[64px] bg-[#d9d9d9] rounded-md mr-4"/>
         <View className="mb-5">
           <Text className="text-left font-medium text-lg">{title}</Text>
           <Text className="text-gray-500 font-medium text-xs mt-1">{date}</Text>

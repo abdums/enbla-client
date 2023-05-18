@@ -1,7 +1,7 @@
 import { View, Text, ScrollView, SafeAreaView, TextInput, TextInputBase, TouchableOpacity, Image } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import BackButton from '../components/BackButton'
-// import UserAddress from '../components/UserAddress'
+import UserAddress from '../components/UserAddress'
 import { TicketIcon } from 'react-native-heroicons/outline'
 import { useDispatch, useSelector } from 'react-redux'
 import { select_basket_item, select_basket_total } from '../redux/basketSlice'
@@ -9,7 +9,7 @@ import Subtotal from '../components/Subtotal'
 import CancelButton from '../components/CancelButton'
 import PaymentBar from '../components/PaymentBar'
 import { selectRestaurant } from '../redux/restaurantSlice'
-
+// this
 const OrderSummary = () => {
   const items = useSelector(select_basket_item)
   const total_basket = useSelector(select_basket_total)
@@ -41,7 +41,7 @@ const OrderSummary = () => {
                   <CancelButton />
               </View>
               <View className="relative top-4">
-                  {/* <UserAddress /> */}
+                  <UserAddress />
               </View>
             </View>
 
@@ -129,15 +129,34 @@ const OrderSummary = () => {
             </View>
             <Text className="font-medium text-lg text-left mt-3">Payment Method</Text>
             <TouchableOpacity className="mt-4">
-              <View className="rounded-xl bg-[#f3f3f3] h-[64px]">
-                <View className="flex flex-row space-x-3 justify-between items-center px-5 py-3">
+            <View className="rounded-xl bg-[#f3f3f3] h-[64px]">
+              <View className="flex flex-row space-x-3 justify-between items-center px-5 py-3">
                     <View className="items-center flex flex-row space-x-3">
                       <Image source={{
-                          uri: "https://cdn.freebiesupply.com/images/large/2x/apple-logo-transparent.png"
+                          uri: "https://play-lh.googleusercontent.com/3oiT4ZT74dy58LzNL1_66_-ySeoNMcKNI3ObGg_DziviGCc2tiNkYOWH5-MNvu0SrSIJ"
                       }}
                       className="h-[40px] w-[40px] mr-2"/>
                       <Text className="text-xl font-medium text-left">
-                          Apple Pay
+                          Chapa
+                      </Text>
+                    </View>
+                    <Text className="text-[#9b9b9b] text-sm font-medium">
+                      Edit
+                    </Text>
+                </View>
+              </View>
+              <View className="border-y border-gray-300/80 my-4 rounded"/>
+              </TouchableOpacity>
+                <TouchableOpacity>
+              <View className="rounded-xl bg-[#f3f3f3] h-[64px]">
+              <View className="flex flex-row space-x-3 justify-between items-center px-5 py-3">
+                    <View className="items-center flex flex-row space-x-3">
+                      <Image source={{
+                          uri: "https://play-lh.googleusercontent.com/Mtnybz6w7FMdzdQUbc7PWN3_0iLw3t9lUkwjmAa_usFCZ60zS0Xs8o00BW31JDCkAiQk"
+                      }}
+                      className="h-[40px] w-[40px] mr-2"/>
+                      <Text className="text-xl font-medium text-left">
+                          Tele birr 
                       </Text>
                     </View>
                     <Text className="text-[#9b9b9b] text-sm font-medium">

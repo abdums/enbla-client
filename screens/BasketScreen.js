@@ -14,7 +14,7 @@ import { useEffect } from 'react'
 import Currency from 'react-currency-formatter'
 import ConfirmationButton from '../components/ConfirmationButton'
 import Subtotal from '../components/Subtotal'
-
+// this
 
 const BasketScreen = () => {
   const navigation = useNavigation();
@@ -83,18 +83,18 @@ const BasketScreen = () => {
                               <Text className="text-sm font-medium text-gray-500 text-left">{items[0]?.price}</Text>
                           </View>
                       </View>
-                      <View className="flex flex-row space-x-4 items-center ">
+                      <View className="flex flex-row w-screen">
                           <TouchableOpacity 
                             onPress={() => dispatch(remove_from_basket({id: items[0]?.id}))} 
                           >
-                              <MinusCircleIcon size={45} color={ "#aeaeae" }/>
+                              <MinusCircleIcon size={55} color={ "#aeaeae" }/>
                           </TouchableOpacity>
-                          <Text className="font-medium text-2xl">{items.length} x</Text>
+                          <Text className="font-small text-xl">{items.length} x</Text>
                           <TouchableOpacity 
                             onPress={() => dispatch(add_to_basket(items[0]))} 
                           >
                               <PlusCircleIcon 
-                              size={45} 
+                              size={15} 
                               color={"#55DF8E"}/>
                           </TouchableOpacity>            
                       </View>
@@ -142,7 +142,7 @@ const BasketScreen = () => {
 
   )
 }
-
+MinusCircleIcon
 export default BasketScreen
 
 // this

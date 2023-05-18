@@ -7,7 +7,7 @@ import {ShoppingBagIcon} from 'react-native-heroicons/outline'
 import {ChevronRightIcon, CreditCardIcon} from 'react-native-heroicons/solid'
 import Currency from 'react-currency-formatter'
 import * as Animatable from 'react-native-animatable'
-
+// this
 
 const PaymentBar = () => {
     const items = useSelector(select_basket_item)

@@ -9,7 +9,7 @@ import * as Progress from 'react-native-progress';
 const DeliveryState = () => {
   const navigation = useNavigation()
   useEffect(() => { 
-    // After couple seconds switch to the next screen 
+    // After couple seconds switch to the next screen  OrderConfirmed
     setTimeout(() => { 
         navigation.navigate("OrderConfirmed")
     }, 5000)

@@ -34,8 +34,8 @@ const DeliverySummary = () => {
         </View>
         <View className="border-y border-gray-300/80 my-4 rounded"/>
         <View className="flex flex-row justify-between items-center">
-            <Text className="text-xl font-bold text-left">Items delivered</Text>
-            <ChevronRightIcon size={20} strokeWidth={4}/>
+            <TouchableOpacity onPress={() => {navigation.navigate("OrderSummary")}}className="text-xl font-bold text-left"><Text>Items delivered</Text></TouchableOpacity>
+            
         </View>
         <View className="border-y border-gray-300/80 my-4 rounded" />
         <TouchableOpacity 
@@ -49,3 +49,5 @@ const DeliverySummary = () => {
 }
 
 export default DeliverySummary
+
+// this

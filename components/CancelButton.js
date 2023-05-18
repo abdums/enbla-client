@@ -1,6 +1,6 @@
 import { TouchableOpacity } from 'react-native'
 import React from 'react'
-import {XIcon} from 'react-native-heroicons/outline'
+// import {XIcon} from 'react-native-heroicons/outline'
 import { useNavigation } from '@react-navigation/native'
 
 
@@ -10,7 +10,7 @@ const CancelButton = () => {
     <TouchableOpacity 
         onPress={() => {navigation.goBack()}}
         className="bg-[#d8d8d8] h-[43px] w-[46px]  rounded-lg items-center flex justify-center ">
-      <XIcon size={24} />
+      {/* <XIcon size={24} /> */}
     </TouchableOpacity>
   )
   // this

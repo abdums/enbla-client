@@ -1,9 +1,9 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 import { TouchableOpacity } from 'react-native'
-import {HomeIcon, SearchIcon, NewspaperIcon, UserIcon, TagIcon} from 'react-native-heroicons/outline'
+// import {HomeIcon, SearchIcon, NewspaperIcon, UserIcon, TagIcon} from 'react-native-heroicons/outline'
 import { useNavigation } from '@react-navigation/native'
-
+// this
 const TempNavigation = () => {
   const navigation = useNavigation()
   return (
@@ -29,35 +29,35 @@ const TempNavigation = () => {
                 <TouchableOpacity 
                     onPress={() => navigation.navigate("Root")}
                     className="items-center px-2 font-medium">
-                    <HomeIcon size={35} strokeWidth={1.5} color={"#000"} />
+                    {/* <HomeIcon size={35} strokeWidth={1.5} color={"#000"} /> */}
                     <Text>Home</Text>
                 </TouchableOpacity>
                 
                 <TouchableOpacity 
                     onPress={() => navigation.navigate("Search")}
                     className="items-center">
-                    <SearchIcon size={35} strokeWidth={1.5} color={"#000"} />
+                    {/* <SearchIcon size={35} strokeWidth={1.5} color={"#000"} /> */}
                     <Text>Search</Text>
                 </TouchableOpacity>
             
                 <TouchableOpacity 
                     onPress={() => navigation.navigate("Orders")}
                     className="items-center">
-                    <NewspaperIcon size={35} strokeWidth={1.5} color={"#000"} />   
+                    {/* <NewspaperIcon size={35} strokeWidth={1.5} color={"#000"} />    */}
                     <Text>Orders</Text>
                 </TouchableOpacity>
             
                 <TouchableOpacity 
                     onPress={() => navigation.navigate("Today")}
                     className="items-center">
-                    <TagIcon size={35} strokeWidth={1.5} color={"#000"} />   
+                    {/* <TagIcon size={35} strokeWidth={1.5} color={"#000"} />    */}
                     <Text>Today</Text>
                 </TouchableOpacity>
             
                 <TouchableOpacity 
                     onPress={() => navigation.navigate("Accounts")}
                     className="items-center">
-                    <UserIcon size={35} strokeWidth={1.5} color={"#000"} />   
+                    {/* <UserIcon size={35} strokeWidth={1.5} color={"#000"} />    */}
                     <Text>Account</Text>
                 </TouchableOpacity>
             </View>

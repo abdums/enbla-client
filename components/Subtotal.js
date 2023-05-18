@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-
+// this
 const Subtotal = ({
     subtotal, 
     discount, 

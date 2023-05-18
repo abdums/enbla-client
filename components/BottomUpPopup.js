@@ -1,7 +1,7 @@
 import { View, Text, ScrollView, SafeAreaView, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
-import { ChevronDownIcon, ChevronRightIcon, LocationMarkerIcon } from 'react-native-heroicons/outline'
+// import { ChevronDownIcon, ChevronRightIcon, LocationMarkerIcon } from 'react-native-heroicons/outline'
 import { useSelector } from 'react-redux'
 import { select_basket_total } from '../redux/basketSlice'
 import * as Animatable from 'react-native-animatable'
@@ -21,12 +21,12 @@ const BottomUpPopup = () => {
                     <Text className="text-xl font-medium text-left">Delivery</Text>
                     <View className="flex flex-row">
                         <View className="items-center flex flex-row space-x-2">
-                            <LocationMarkerIcon size={20}/>
+                            {/* <LocationMarkerIcon size={20}/> */}
                             <Text className="font-semibold text-base ml-1 underline-offset-1">
                                 Lorem Ipsum Street 
                             </Text>
                             <Text className="">
-                                <ChevronRightIcon size={20} strokeWidth={4} />
+                                {/* <ChevronRightIcon size={20} strokeWidth={4} /> */}
                             </Text>
                         </View>
                     </View>
@@ -44,7 +44,7 @@ const BottomUpPopup = () => {
                 </View>
                 <View className="border-y border-gray-300/80 my-4 rounded"/>
                 <View className="flex flex-row justify-between items-center">
-                    <View className="flex flex-row space-x-3 items-center">
+                <View className="flex flex-row space-x-3 items-center">
                         <Image source={{
                             uri: "https://cdn.freebiesupply.com/images/large/2x/apple-logo-transparent.png"
     //   this
@@ -55,9 +55,11 @@ const BottomUpPopup = () => {
                         </Text>
                     </View>
                     <Text className="">
-                        <ChevronRightIcon size={20} strokeWidth={4} />
+                        {/* <ChevronRightIcon size={20} strokeWidth={4} /> */}
                     </Text>
                 </View>
+            {/* //another one */}
+                
                 <TouchableOpacity 
                     onPress={() => {
                         navigation.navigate("OrderSummary");

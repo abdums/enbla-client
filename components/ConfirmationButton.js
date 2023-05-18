@@ -13,6 +13,7 @@ import * as Animatable from 'react-native-animatable'
 //     </Modal>
 //   ) 
 // }
+// this
 const ConfirmationButton = () => {
   const [visible, setShowModal] = useState(false)
   const openModal = () => { 
