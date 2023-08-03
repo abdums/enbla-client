@@ -1,34 +1,62 @@
+import 'react-native-url-polyfill/auto';
+import { View, Text, ScrollView, TouchableOpacity, Image } from 'react-native'
 import React, { useEffect } from 'react'
-import { ScrollView } from 'react-native';
 import CategoryCard from './CategoryCard'
 import { useState } from 'react'
-// import { getCategories } from '../services/api';
+import { getCategories } from '../api'
+import { urlFor } from '../sanity';
+import { useNavigation } from '@react-navigation/native';
 
 
 const Categories = () => {
-    // const [categories, setCategories] = useState([])
-    // useEffect(() => {
-    //     getCategories().then(data => {
-    //         setCategories(data)
-    //     }).catch(err => console.log(err))
-    //   }, [])
-
-    //   console.log(categories);
-
+    const navigation = useNavigation();
+    const [activeCategory, setActiveCategory] = useState(null);
+  const [categories, setCategories] = useState([])
+  useEffect(() => {
+    getCategories().then(data=>{
+      setCategories(data);
+    })
+  }, [])
+     
 
     return (
-        <ScrollView 
-            contentContainerStyle={{
-                paddingTop: 15
-            }}
-            horizontal 
-            showsHorizontalScrollIndicator={false}>
-            <CategoryCard img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_upF9cgyXK9fYh85mVV-ZEYKw04JcTzUjLw&usqp=CAU" title="Burger" selected={true}/>
-            <CategoryCard img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9cDvvQ0oPzCcZdHL6LG2YPt1hcEIjU17mMg&usqp=CAU" title="Pizza" selected={false}/>
-            <CategoryCard img="https://photos.smugmug.com/Africa/Eritrea/Asmara/i-Z9D6SR5/0/93341e18/L/Canva%20-%20Injera%20be%20wot%2C%20traditional%20Ethiopian%20Food-min-L.jpg" title="Habesha" selected={false}/>
-            <CategoryCard img="https://i0.wp.com/post.medicalnewstoday.com/wp-content/uploads/sites/3/2023/01/chips-ketchup-Fast-food-liver-disease-1296x728-header-1024x575.png?w=1155&h=1528" title="Fast Foods" selected={false}/>
-            <CategoryCard img="https://stordfkenticomedia.blob.core.windows.net/df-us/rms/media/recipemediafiles/recipes/retail/x17/17244-caramel-topped-ice-cream-dessert-760x580.jpg?ext=.jpg" title="Deserts" selected={false}/>
+        <View className="mt-4">
+        <ScrollView
+          
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          className="overflow-visible"
+          contentContainerStyle={{
+            paddingHorizontal: 15
+          }}
+      >
+                
+                {
+            categories?.map(category=>{
+              let isActive = category._id==activeCategory;
+              let btnClass = isActive? ' bg-gray-600': ' bg-gray-200';
+              let textClass = isActive? ' font-semibold text-gray-800': ' text-gray-500';
+              return(
+                <View key={category._id} className="flex justify-center items-center mr-6">
+                  <TouchableOpacity 
+                  onPress={() => navigation.navigate("CategoryScreen",{id:category._id})
+                   }  
+                    className={"p-1   shadow"+ btnClass}>
+                    <Image className="relative bottom-1 w-12 h-10 rounded-full" source={{
+                        uri: urlFor(category.image).url(),
+                    }} 
+                    />
+                  </TouchableOpacity>
+                  <Text className={"text-sm "+textClass}>{category.name}</Text>
+                </View> 
+              )
+            })
+          }
+
+        
+            
         </ScrollView>
+        </View>
   )
 }
 

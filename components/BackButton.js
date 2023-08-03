@@ -5,6 +5,10 @@ import { useNavigation } from '@react-navigation/native'
 import { useDispatch, useSelector } from 'react-redux'
 import { remove_all_items, select_basket_item, select_basket_total } from '../redux/basketSlice'
 
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" />
+</svg>
+ 
 // this
 const BackButton = () => {
   const navigation = useNavigation();
@@ -26,8 +30,8 @@ const BackButton = () => {
   return (
     <TouchableOpacity 
         onPress={() => {clearCart(items)}}
-        className="bg-[#f3f3f3] h-[43px] w-[46px]  rounded-lg items-center flex justify-center ">
-      <ChevronLeftIcon size={24} />
+        className="bg-[#ede0e0] h-[43px] w-[46px]  rounded-lg items-center flex justify-center ">
+      <ChevronLeftIcon color='#000' size={24} />
     </TouchableOpacity>
   )
 }

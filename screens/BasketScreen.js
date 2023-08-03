@@ -14,6 +14,7 @@ import { useEffect } from 'react'
 import Currency from 'react-currency-formatter'
 import ConfirmationButton from '../components/ConfirmationButton'
 import Subtotal from '../components/Subtotal'
+import { urlFor } from '../sanity'
 // this
 
 const BasketScreen = () => {
@@ -70,12 +71,12 @@ const BasketScreen = () => {
                       
                       <View className="flex flex-row space-x-3 justify-between items-center">
                           <View className="rounded-lg ">
-                            <Image 
-                                source={{
-                                uri: items[0]?.image
-                                }}
+                            {/* <Image 
+                               source={{uri: urlFor(image).url()
+                               }}
+                               
                             className="h-[61px] w-[61px]
-                            "/>
+                            "/> */}
                           </View>
                           
                           <View className="">
@@ -102,10 +103,7 @@ const BasketScreen = () => {
               ))
             }
         </ScrollView>
-          {/* <View className="flex flex-row items-center justify-center space-x-1 mt-6">
-            <PlusCircleIcon size={35} color={"#aeaeae"}/>
-            <Text className="text-xs font-medium text-gray-400">Add More Items</Text>
-          </View> */}
+          
           <View className="border-y border-gray-300/80 my-4 rounded"/>
         </View>
 
@@ -124,11 +122,9 @@ const BasketScreen = () => {
         
         <Subtotal
           subtotal={Math.floor(-total_basket)}
-          discount={Math.floor(items[0]?.price/4)}
-          shipping_fee={Math.floor(items[0]?.price/4)}
-          total={Math.floor(-total_basket + 
-            (items[0]?.price/4) + 
-            (items[0]?.price/4))}
+          discount={0}
+          shipping_fee={0}
+          total={Math.floor(-total_basket )}
           items={items.length}
         />
 

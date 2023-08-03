@@ -14,7 +14,7 @@ const CartRow = () => {
                 
                 <View>
                     <Text className="font-medium text-lg text-left">Chicken Nuggets</Text>
-                    <Text className="text-sm font-medium text-gray-500 text-left">$112.99</Text>
+                    <Text className="text-sm font-medium text-gray-500 text-left">ETB 112</Text>
                 </View>
             </View>
 

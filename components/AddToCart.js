@@ -19,7 +19,7 @@ const AddToCart = ({id}) => {
         <TouchableOpacity 
             disabled={items.length === 0}
             onPress={() => {
-                navigation.navigate("Root");
+                navigation.navigate("Home");
             }}
             className="bg-black items-center rounded-2xl p-5 mt-4">
             <View className="items-center space-x-1 flex flex-row">

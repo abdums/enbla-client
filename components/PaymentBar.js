@@ -38,7 +38,7 @@ const PaymentBar = () => {
         flex-row items-center">
 
           <Text className="text-white font-bold text-left text-lg">
-            <Currency quantity={-basket_total} currency="USD" />
+            <Currency quantity={-basket_total} currency="ETB" />
           </Text>
           
           <View className="relative top-0">

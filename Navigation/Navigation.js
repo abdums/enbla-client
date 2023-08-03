@@ -17,17 +17,27 @@ import OrderConfirmed from '../screens/on_delivery_screens/OrderConfirmed';
 import DeliveryInProgress from '../screens/on_delivery_screens/DeliveryInProgress';
 import CourierOnItsWay from '../screens/on_delivery_screens/CourierOnItsWay';
 import DeliverySummary from '../screens/on_delivery_screens/DeliverySummary';
+import { useSelector } from 'react-redux';
 
 
 const Stack = createNativeStackNavigator();
-
 const Navigation = () => {
+  const {user: {userId}} = useSelector(state => state.user)
   return (
     <Stack.Navigator screenOptions={{cardStyle: {backgroundColor: '#00000'}}}>
-      {/* Homepage */}
-      <Stack.Screen name ="Root" component={BottomTab} 
+         
+      <Stack.Screen name="Signup" component={SignUpScreen}
+      options={{
+        presentation: "fullScreenModal", headerShown: false
+      }}
+      />
+       {/* Homepage */}
+       <Stack.Screen name ="Home" component={BottomTab} 
         options={{ presentation: "fullScreenModal", headerShown: false }}
       />
+ 
+
+   
       {/* Food Page */}
       <Stack.Screen name="FoodStack" component={FoodScreen}
         options={{
@@ -44,11 +54,7 @@ const Navigation = () => {
           presentation: "fullScreenModal", headerShown: false
         }}
       />
-      <Stack.Screen name="Signup" component={SignUpScreen}
-        options={{
-          presentation: "fullScreenModal", headerShown: false
-        }}
-      />
+      
         {/* Restaurant Page */}
         <Stack.Screen name ="RestaurantStack" 
           component={RestaurantProfile}

@@ -30,7 +30,7 @@ const DeliverySummary = () => {
         </View>
         <View className="flex flex-row justify-between">
             <Text className="text-lg font-medium text-left">Total Cost</Text>
-            <Text className="text-lg font-normal">$90.00</Text>
+            <Text className="text-lg font-normal">ETB 90.00</Text>
         </View>
         <View className="border-y border-gray-300/80 my-4 rounded"/>
         <View className="flex flex-row justify-between items-center">

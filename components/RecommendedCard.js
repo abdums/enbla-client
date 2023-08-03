@@ -25,17 +25,17 @@ const RecommendedCard = ({  id,
   return (
     // Passing this parameters into FoodStack
     <TouchableOpacity 
-      onPress={() => {navigation.navigate("FoodStack", {
-        id,
-        name,
-        description,
-        avg_person,
-        delivery,
-        avg_waiting,
-        restaurant_name,
-        image,
-        price,
-      })}}
+      // onPress={() => {navigation.navigate("FoodStack", {
+      //   id,
+      //   name,
+      //   description,
+      //   avg_person,
+      //   delivery,
+      //   avg_waiting,
+      //   restaurant_name,
+      //   image,
+      //   price,
+      // })}}
       className="w-[281px] h-[179px] bg-black/10  rounded-2xl mr-4">
       {/* Waiting time widget */}
       
@@ -46,35 +46,9 @@ const RecommendedCard = ({  id,
       className="w-[281px] h-[179px] rounded-2xl"/>
       
       
-      <View className="
-        flex items-center 
-        justify-center px-1
-        w-[68px] h-[23px]
-        bg-black rounded-lg
-        absolute left-1 top-1 m-3
-        ">
-        <Text className="text-white font-medium text-xs">{avg_waiting} min</Text>
-      </View>
+   
 
-      {/* Like Button */}
-      <TouchableOpacity 
-        onPress={() => setLiked(!liked)}
-        className="
-          flex items-center 
-          justify-center 
-          absolute right-1 top-1 m-3
-          bg-white p-[6px] rounded-lg
-          ">
-          {
-              liked ? (
-                <HeartIcon size={22} color={"#FF3232"}/>
-
-              ) : (
-                <HeartIcon size={22} color={"#c8c8c8"}/>
-                
-              )
-          }
-      </TouchableOpacity>
+    
 
 
       {/* Good for this many persons */}
@@ -87,10 +61,7 @@ const RecommendedCard = ({  id,
               <UserIcon size={16} /> {avg_person} Person</Text>
           </View>
 
-          {/* Free Delivery */}
-          <View className="flex items-center justify-center px-2 h-[23px] bg-[#c8c8c8]/40 rounded-lg">
-            <Text className="text-white font-medium text-sm">{delivery}</Text>
-          </View>
+          
 
         </View>
 

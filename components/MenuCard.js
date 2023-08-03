@@ -1,7 +1,7 @@
 import { View, Text, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
-
+import { urlFor } from '../sanity'
 // this
 
 const MenuCard = ({
@@ -19,15 +19,12 @@ const MenuCard = ({
   return (
     <TouchableOpacity 
       onPress={() => navigation.navigate("FoodStack", { 
+      
         id,
         name,
         description,
-        avg_person,
-        delivery,
-        avg_waiting,
-        restaurant_name,
-        image,
         price,
+        image 
       })}
       className="flex flex-row justify-between mb-6 items-end">
         <View className="space-y-1">
@@ -50,8 +47,7 @@ const MenuCard = ({
         <View className="rounded-lg ">
 {/* <Image/>  */}
               <Image 
-                  source={{
-                  uri: image
+                  source={{  uri: urlFor(image).url()
                   }}
               className="h-20 w-20 rounded-full
               "/>
