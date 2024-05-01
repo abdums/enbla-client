@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "enbla-client",
-    "slug": "enbla-client",
+    "slug": "enbla-clients",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

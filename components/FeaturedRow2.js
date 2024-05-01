@@ -1,59 +1,66 @@
-import { View, Text, ScrollView } from 'react-native'
-import React from 'react'
+import { View, Text, ScrollView } from "react-native";
+import React from "react";
 
-import RestaurantCard from './RestaurantCard'
+import RestaurantCard from "./RestaurantCard";
 // this
-const FeaturedRow2 = ({id, title}) => {
-  
-    
+const FeaturedRow2 = ({ id, title }) => {
   return (
-
     <View className="mb-9">
-        <View className="border-y border-gray-300/80 rounded mb-4"/>
+      <View className="border-y border-gray-300/80 rounded mb-4" />
 
-        <View className="justify-between items-end flex-row">
-            <Text className="text-xl font-medium relative">{title}</Text>
-            <Text className="text-sm font-medium text-red-400">Show All</Text>
+      <View className="justify-between items-end flex-row">
+        <Text className="text-xl font-medium relative">{title}</Text>
+        <Text className="text-sm font-medium text-red-400">Show All</Text>
+      </View>
+
+      <ScrollView
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        className="pt-4"
+      >
+        <View className="flex-row">
+          <RestaurantCard
+            id={1}
+            avg_waiting={"10 - 15"}
+            name={"Saba's Food"}
+            short_description={
+              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took"
+            }
+            avg_person={"2"}
+            ratings={"5.0"}
+            total_reviews={"100"}
+            delivery_price={"Free Delivery"}
+            address={"Addis Ababa, Arat kilo"}
+            thumbnail={
+              "https://scontent-mia3-1.xx.fbcdn.net/v/t1.18169-9/13508966_1131745173556907_2908253575439854396_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=e3f864&_nc_ohc=kHEZiJzpLDEAX-DGAVf&_nc_ht=scontent-mia3-1.xx&oh=00_AfDsfRsK1WaT9_rm0lOwCe1UV_b2VU1rv1X2QSqbvV4cvQ&oe=648D3B83"
+            }
+            profile_pic={
+              "https://scontent-mia3-1.xx.fbcdn.net/v/t1.18169-9/13508966_1131745173556907_2908253575439854396_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=e3f864&_nc_ohc=kHEZiJzpLDEAX-DGAVf&_nc_ht=scontent-mia3-1.xx&oh=00_AfDsfRsK1WaT9_rm0lOwCe1UV_b2VU1rv1X2QSqbvV4cvQ&oe=648D3B83"
+            }
+          />
+          <RestaurantCard
+            id={2}
+            avg_waiting={"10 - 15"}
+            name={"Ethiopians's Food Truck"}
+            short_description={
+              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took"
+            }
+            avg_person={"2"}
+            ratings={"5.0"}
+            total_reviews={"100"}
+            delivery_price={"Free Delivery"}
+            address={"Bole"}
+            thumbnail={
+              "https://scontent-mia3-1.xx.fbcdn.net/v/t1.18169-9/13508966_1131745173556907_2908253575439854396_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=e3f864&_nc_ohc=kHEZiJzpLDEAX-DGAVf&_nc_ht=scontent-mia3-1.xx&oh=00_AfDsfRsK1WaT9_rm0lOwCe1UV_b2VU1rv1X2QSqbvV4cvQ&oe=648D3B83"
+            }
+            profile_pic={
+              "https://scontent-mia3-1.xx.fbcdn.net/v/t1.18169-9/13508966_1131745173556907_2908253575439854396_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=e3f864&_nc_ohc=kHEZiJzpLDEAX-DGAVf&_nc_ht=scontent-mia3-1.xx&oh=00_AfDsfRsK1WaT9_rm0lOwCe1UV_b2VU1rv1X2QSqbvV4cvQ&oe=648D3B83"
+            }
+          />
         </View>
-        
-        <ScrollView
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              className="pt-4"
-        >
-            <View className="flex-row">
-                <RestaurantCard 
-                    id={1}
-                    avg_waiting={"10 - 15"} 
-                    name={"Mcdonald's"}
-                    short_description={"Chicken, Sauce, Pork"}
-                    avg_person={"2"} 
-                    ratings={"5.0"}
-                    total_reviews={"100"}
-                    delivery_price={"Free Delivery"}
-                    address={"Nandos UK"}
-                    thumbnail={"https://images.unsplash.com/photo-1631540223537-8f2d49a4ad9d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"}
-                    profile_pic={"https://cdn.mos.cms.futurecdn.net/xDGQ9dbLmMpeEqhiWayMRB.jpg"}
-
-                />                
-                <RestaurantCard 
-                    id={2}
-                    avg_waiting={"10 - 15"} 
-                    name={"Nando's"}
-                    short_description={"Chicken, Sauce, Pork"}
-                    avg_person={"2"} 
-                    ratings={"5.0"}
-                    total_reviews={"100"}
-                    delivery_price={"Free Delivery"}
-                    address={"Nandos UK"}
-                    thumbnail={"https://images.unsplash.com/photo-1633260682035-b6270ab1b314?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1051&q=80"}
-                    profile_pic={"https://cdn.mos.cms.futurecdn.net/xDGQ9dbLmMpeEqhiWayMRB.jpg"}
-
-                />                
-            </View>
-        </ScrollView>
+      </ScrollView>
     </View>
-  )
-}
+  );
+};
 
-export default FeaturedRow2
+export default FeaturedRow2;
